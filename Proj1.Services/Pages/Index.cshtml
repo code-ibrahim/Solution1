@@ -1,0 +1,19 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to Proj1</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <div><button onkeypress="btn_showClick()" onmousedown="btn_showClick()" onclick="btn_showClick()">Show</button>
+    <p id="show1"></p>
+    </div>
+</div>
+<script>
+    function btn_showClick() {
+        document.getElementById("show1").innerHTML = "show buttom clicked";
+        $.get("/btn_showClick", function () { });
+    }
+</script>
